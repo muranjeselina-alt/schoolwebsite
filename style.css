@@ -1,0 +1,1306 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   HEADER & NAVIGATION
+========================================= */
+
+.header {
+    width: 100%;
+    background-color: #ffffff;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Main navigation container */
+
+.navbar {
+    width: 90%;
+    max-width: 1250px;
+
+    min-height: 80px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+.logo-box {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #6a0dad;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.school-name {
+    line-height: 1.1;
+}
+
+.school-name h2 {
+    color: #4b0878;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+.school-name span {
+    color: #6a0dad;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 32px;
+
+    margin-left: auto;
+}
+
+.nav-links li {
+    display: flex;
+
+    align-items: center;
+}
+
+.nav-links a {
+    position: relative;
+
+    display: block;
+
+    color: #333333;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    padding: 10px 0;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover line */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background-color: #6a0dad;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #6a0dad;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Active link */
+
+.nav-links a.active {
+    color: #6a0dad;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   NAV BUTTON
+========================================= */
+
+.nav-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    white-space: nowrap;
+
+    background-color: #6a0dad;
+
+    color: #ffffff;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+
+    flex-shrink: 0;
+}
+
+.nav-button:hover {
+    background-color: #4b0878;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.25);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 650px;
+
+    background-color: #f7f0ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    padding: 80px 7%;
+}
+
+.hero-content {
+    width: 50%;
+
+    max-width: 620px;
+}
+
+.welcome-text {
+    color: #6a0dad;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: #2e064a;
+
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #6a0dad;
+
+    display: block;
+}
+
+.hero-description {
+    color: #555555;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #6a0dad;
+
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background-color: #4b0878;
+
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    color: #6a0dad;
+
+    border: 2px solid #6a0dad;
+}
+
+.secondary-btn:hover {
+    background-color: #6a0dad;
+
+    color: #ffffff;
+}
+
+.hero-image {
+    width: 48%;
+}
+
+.hero-image img {
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(106, 13, 173, 0.20);
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section {
+    padding: 90px 7%;
+}
+
+.light-section {
+    background-color: #faf7ff;
+}
+
+.section-title {
+    max-width: 750px;
+
+    text-align: center;
+
+    margin: 0 auto 55px;
+}
+
+.section-title p {
+    color: #6a0dad;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    color: #2e064a;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+}
+
+.section-title span {
+    color: #666666;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.about-image {
+    width: 50%;
+}
+
+.about-image img {
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+.about-content {
+    width: 50%;
+}
+
+.about-content h3 {
+    color: #4b0878;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #555555;
+
+    margin-bottom: 15px;
+}
+
+.about-points {
+    margin: 25px 0;
+}
+
+.about-points div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.about-points strong {
+    width: 25px;
+
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #6a0dad;
+
+    color: #ffffff;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.statistics {
+    background-color: #6a0dad;
+
+    color: #ffffff;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 55px 7%;
+
+    text-align: center;
+}
+
+.stat {
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat h2 {
+    font-size: 40px;
+}
+
+.stat p {
+    font-size: 17px;
+}
+
+
+/* =========================================
+   ACADEMICS
+========================================= */
+
+.academic-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.academic-card {
+    background-color: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,0.08);
+
+    transition: all 0.3s ease;
+}
+
+.academic-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(106, 13, 173, 0.15);
+}
+
+.card-icon {
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #f0ddff;
+
+    color: #6a0dad;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.academic-card h3 {
+    color: #4b0878;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.academic-card p {
+    color: #666666;
+
+    margin-bottom: 20px;
+}
+
+.academic-card a {
+    color: #6a0dad;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.feature {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    border-color: #6a0dad;
+
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    background-color: #f5eaff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 40px;
+}
+
+.feature h3 {
+    color: #4b0878;
+
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #666666;
+}
+
+
+/* =========================================
+   NEWS
+========================================= */
+
+.news-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.news-card {
+    background-color: #ffffff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card img {
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-content small {
+    color: #6a0dad;
+
+    font-weight: bold;
+}
+
+.news-content h3 {
+    color: #4b0878;
+
+    font-size: 22px;
+
+    margin: 10px 0;
+}
+
+.news-content p {
+    color: #666666;
+
+    margin-bottom: 15px;
+}
+
+.news-content a {
+    color: #6a0dad;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ADMISSIONS
+========================================= */
+
+.admissions {
+    background-color: #6a0dad;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 90px 7%;
+}
+
+.admissions-content {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.admissions-content > p:first-child {
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.admissions h2 {
+    font-size: 45px;
+
+    margin: 15px 0;
+}
+
+.admissions h2 span {
+    color: #ead4ff;
+}
+
+.admissions-content > p:not(:first-child) {
+    font-size: 17px;
+
+    margin-bottom: 30px;
+}
+
+.white-btn {
+    background-color: #ffffff;
+
+    color: #6a0dad;
+}
+
+.white-btn:hover {
+    background-color: #f0e2ff;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 60px;
+}
+
+.contact-info h3 {
+    color: #4b0878;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: #666666;
+
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item strong {
+    color: #6a0dad;
+}
+
+.contact-item p {
+    color: #555555;
+
+    margin-top: 5px;
+}
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #6a0dad;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: fit-content;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background-color: #25043d;
+
+    color: #ffffff;
+
+    padding-top: 60px;
+}
+
+.footer-container {
+    width: 86%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 50px;
+}
+
+.footer-about h2 {
+    margin-bottom: 15px;
+}
+
+.footer-about p {
+    color: #d5c8dc;
+
+    max-width: 350px;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-links h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #d5c8dc;
+
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+
+    padding-left: 5px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: #c9bad1;
+}
+
+
+/* =========================================
+   MEDIA QUERY
+   LARGE TABLETS
+   1100px AND BELOW
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        width: 94%;
+
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-button {
+        padding: 10px 16px;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+}
+
+
+/* =========================================
+   MEDIA QUERY
+   TABLETS
+   900px AND BELOW
+========================================= */
+
+@media (max-width: 900px) {
+
+    /*
+       Navigation becomes two rows.
+       Logo and button stay on the first row.
+       Links appear underneath.
+    */
+
+    .navbar {
+        flex-wrap: wrap;
+
+        justify-content: space-between;
+
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        margin-left: 0;
+
+        justify-content: center;
+
+        gap: 25px;
+
+        padding: 10px 0 5px;
+
+        border-top: 1px solid #eeeeee;
+    }
+
+    .hero {
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .academic-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================
+   MEDIA QUERY
+   MOBILE
+   700px AND BELOW
+========================================= */
+
+@media (max-width: 700px) {
+
+    /* Navigation */
+
+    .navbar {
+        width: 92%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px 0;
+    }
+
+    .logo {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 8px 18px;
+
+        padding: 12px 0;
+
+        border-top: 1px solid #eeeeee;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 60px 6%;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+
+    /* About */
+
+    .about-container {
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+
+    /* Statistics */
+
+    .statistics {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+
+        padding: 45px 6%;
+    }
+
+    .stat {
+        border-right: none;
+    }
+
+    .stat h2 {
+        font-size: 32px;
+    }
+
+
+    /* Academics */
+
+    .academic-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Features */
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* News */
+
+    .news-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Contact */
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Footer */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================
+   MEDIA QUERY
+   SMALL MOBILE
+   500px AND BELOW
+========================================= */
+
+@media (max-width: 500px) {
+
+    .logo-box {
+        width: 42px;
+
+        height: 42px;
+    }
+
+    .school-name h2 {
+        font-size: 18px;
+    }
+
+    .school-name span {
+        font-size: 9px;
+    }
+
+    .nav-links {
+        gap: 5px 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .section {
+        padding: 65px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+
+    .admissions {
+        padding: 65px 5%;
+    }
+
+    .admissions h2 {
+        font-size: 34px;
+    }
+
+    .academic-card {
+        padding: 25px;
+    }
+
+}
